@@ -31,25 +31,6 @@ public class Match {
         
     }
     
-    public void initialBoard(){
-        
-        if(turn==0){
-            for(int h=0;h<9;h++){
-                plays[h]="a";
-            }
-        }
-        
-        for(int i=0;i<rows;i++){
-            System.out.print(3-i + " ");
-            for(int j=0;j<columns;j++){
-                System.out.print("- ");
-            }
-            System.out.println();
-        }
-        System.out.println("  a b c");
-        //setTurn();
-    }
-    
     public int getTurn(){
         return turn;
     }
@@ -111,7 +92,6 @@ public class Match {
         
         plays[x]="x ";
         
-        printPlays();
         setTurn();
     }
     
@@ -138,8 +118,6 @@ public class Match {
         
         plays[x]="o ";
         
-        
-        printPlays();
         setTurn();
         
     }
