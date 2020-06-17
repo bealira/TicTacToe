@@ -258,7 +258,6 @@ public class Match {
             System.out.println("Turn X");
             try{
                 playX();
-                UI.clearScreen();
             }catch(positionException e){
                 System.out.println("Invalid Position");
             }
@@ -267,7 +266,6 @@ public class Match {
             System.out.println("Turn O");
             try{
                 playO();
-                UI.clearScreen();
             }catch(positionException e){
                 System.out.println("Invalid Position");
             }

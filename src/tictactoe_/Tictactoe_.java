@@ -28,6 +28,7 @@ public class Tictactoe_ {
         
         while(match.winner()!=0){
             match.controller();
+            UI.clearScreen();
         }
         
         String winner;
