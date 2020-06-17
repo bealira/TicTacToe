@@ -18,12 +18,16 @@ public class Match {
     
     private final int rows=3;
     private final int columns=3;
-    private int turn=0;
+    private int turn=1;
     private Scanner sc=new Scanner(System.in);
     private String position;
     private String[] plays=new String[9];
     
     public Match(){
+        
+        for(int h=0;h<9;h++){
+            plays[h]="a";
+        }
         
     }
     
@@ -43,7 +47,7 @@ public class Match {
             System.out.println();
         }
         System.out.println("  a b c");
-        setTurn();
+        //setTurn();
     }
     
     public int getTurn(){
@@ -253,6 +257,11 @@ public class Match {
     }
     
     public void controller(){
+        
+        if(turn!=0)
+            UI.clearScreen();
+        
+        printPlays();
         
         if(turn%2!=0){
             System.out.println("Turn X");

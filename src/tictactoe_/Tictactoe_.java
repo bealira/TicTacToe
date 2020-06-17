@@ -24,11 +24,10 @@ public class Tictactoe_ {
         System.out.println();
          
         Match match=new Match();
-        match.initialBoard();
+        //match.initialBoard();
         
         while(match.winner()!=0){
             match.controller();
-            UI.clearScreen();
         }
         
         String winner;
