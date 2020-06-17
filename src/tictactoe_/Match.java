@@ -6,6 +6,9 @@
 package tictactoe_;
 
 import java.util.Scanner;
+import static tictactoe_.UI.ANSI_BLUE;
+import static tictactoe_.UI.ANSI_RED;
+import static tictactoe_.UI.ANSI_RESET;
 
 /**
  *
@@ -143,8 +146,13 @@ public class Match {
         for(int i=0;i<3;i++){
             if("a".equals(plays[i])){
                 System.out.print("- ");
-            }else
-                System.out.print(plays[i]);
+            }else{
+                if("x ".equals(plays[i]))
+                    System.out.print(ANSI_RED + plays[i] + ANSI_RESET);
+                else
+                    System.out.print(ANSI_BLUE + plays[i] + ANSI_RESET);
+            }
+                
         }
         System.out.println();
         System.out.print("2 ");
@@ -152,7 +160,10 @@ public class Match {
             if("a".equals(plays[i])){
                 System.out.print("- ");
             }else
-                System.out.print(plays[i]);
+                if("x ".equals(plays[i]))
+                    System.out.print(ANSI_RED + plays[i] + ANSI_RESET);
+                else
+                    System.out.print(ANSI_BLUE + plays[i] + ANSI_RESET);
         }
         System.out.println();
         System.out.print("1 ");
@@ -160,7 +171,10 @@ public class Match {
             if("a".equals(plays[i])){
                 System.out.print("- ");
             }else
-                System.out.print(plays[i]);
+                if("x ".equals(plays[i]))
+                    System.out.print(ANSI_RED + plays[i] + ANSI_RESET);
+                else
+                    System.out.print(ANSI_BLUE + plays[i] + ANSI_RESET);
         }
         System.out.println();
         System.out.println("  a b c");
@@ -244,6 +258,7 @@ public class Match {
             System.out.println("Turn X");
             try{
                 playX();
+                UI.clearScreen();
             }catch(positionException e){
                 System.out.println("Invalid Position");
             }
@@ -252,6 +267,7 @@ public class Match {
             System.out.println("Turn O");
             try{
                 playO();
+                UI.clearScreen();
             }catch(positionException e){
                 System.out.println("Invalid Position");
             }
