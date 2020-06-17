@@ -290,4 +290,22 @@ public class Match {
         return position;
     }
     
+    public int draw(){
+        int soma=0;
+        
+        for(int i=0;i<9;i++){
+            if(plays[i]!="a"){
+                soma+=1;
+            }
+        }
+        
+        if(soma==9){
+            return 0;
+        } else{
+            return 1;
+        }
+        
+    }
+    
+    
 }

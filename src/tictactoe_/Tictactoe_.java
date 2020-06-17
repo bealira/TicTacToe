@@ -24,9 +24,8 @@ public class Tictactoe_ {
         System.out.println();
          
         Match match=new Match();
-        //match.initialBoard();
         
-        while(match.winner()!=0){
+        while(match.winner()!=0 && match.draw()!=0){
             match.controller();
         }
         
@@ -37,7 +36,10 @@ public class Tictactoe_ {
             winner="X";
         }
         
-        System.out.println("Winner: " + winner);
+        if(match.draw()==0){
+            System.out.println("Draw");
+        }else
+            System.out.println("Winner: " + winner);
         
     }
     
