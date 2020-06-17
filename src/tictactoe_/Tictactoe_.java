@@ -36,7 +36,7 @@ public class Tictactoe_ {
             winner="X";
         }
         
-        if(match.draw()==0){
+        if(match.draw()==0 && match.winner()!=0){
             System.out.println("Draw");
         }else
             System.out.println("Winner: " + winner);
