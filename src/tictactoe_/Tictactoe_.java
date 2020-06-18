@@ -18,8 +18,6 @@ public class Tictactoe_ {
      */
     public static void main(String[] args) {
         
-        Scanner sc=new Scanner(System.in);
-        
         System.out.println("Tic Tac Toe Match");
         System.out.println();
          
@@ -35,6 +33,10 @@ public class Tictactoe_ {
         } else{
             winner="X";
         }
+        
+        UI.clearScreen();
+        
+        match.printPlays();
         
         if(match.draw()==0 && match.winner()!=0){
             System.out.println("Draw");

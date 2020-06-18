@@ -106,12 +106,10 @@ public class Match {
             x=convertPosition(position);
             System.out.println();
             if(x==-1){
-                printPlays();
                 throw new positionException("Invalid Position");
             }
             
             if(occupiedPosition(x)==-1){
-                printPlays();
                 throw new positionException("Choose a free position");
             }
         }while(occupiedPosition(x)==-1);
@@ -166,67 +164,35 @@ public class Match {
     
     public int winner(){
         
-       if(plays[0].equals(plays[1]) && plays[1].equals(plays[2]) && plays[0].equals("x ")){
+       if(plays[0].equals(plays[1]) && plays[1].equals(plays[2]) && (plays[0].equals("x ") || plays[0].equals("o "))){
            return 0;
        }
         
-       if(plays[3].equals(plays[4]) && plays[4].equals(plays[5]) && plays[3].equals("x ")){
+       if(plays[3].equals(plays[4]) && plays[4].equals(plays[5]) && (plays[3].equals("x ") || plays[3].equals("o "))){
            return 0;
        }
        
-       if(plays[6].equals(plays[7]) && plays[7].equals(plays[8])  && plays[6].equals("x ")){
+       if(plays[6].equals(plays[7]) && plays[7].equals(plays[8])  && (plays[6].equals("x ") || plays[6].equals("o "))){
            return 0;
        }
        
-       if(plays[0].equals(plays[3]) && plays[3].equals(plays[6]) && plays[0].equals("x ")){
+       if(plays[0].equals(plays[3]) && plays[3].equals(plays[6]) && (plays[0].equals("x ") || plays[0].equals("o "))){
            return 0;
        }
        
-       if(plays[1].equals(plays[4]) && plays[4].equals(plays[7])  && plays[1].equals("x ")){
+       if(plays[1].equals(plays[4]) && plays[4].equals(plays[7])  && (plays[1].equals("x ") || plays[1].equals("o "))){
            return 0;
        }
        
-       if(plays[2].equals(plays[5]) && plays[5].equals(plays[8]) && plays[2].equals("x ")){
+       if(plays[2].equals(plays[5]) && plays[5].equals(plays[8]) && (plays[2].equals("x ") || plays[2].equals("o "))){
            return 0;
        }
        
-       if(plays[0].equals(plays[4]) && plays[4].equals(plays[8]) && plays[0].equals("x ")){
+       if(plays[0].equals(plays[4]) && plays[4].equals(plays[8]) && (plays[0].equals("x ") || plays[0].equals("o "))){
            return 0;
        }
        
-       if(plays[2].equals(plays[4]) && plays[4].equals(plays[6]) && plays[2].equals("x ")){
-           return 0;
-       }
-       
-       if(plays[0].equals(plays[1]) && plays[1].equals(plays[2]) && plays[0].equals("o ")){
-           return 0;
-       }
-        
-       if(plays[3].equals(plays[4]) && plays[4].equals(plays[5]) && plays[3].equals("o ")){
-           return 0;
-       }
-       
-       if(plays[6].equals(plays[7]) && plays[7].equals(plays[8])  && plays[6].equals("o ")){
-           return 0;
-       }
-       
-       if(plays[0].equals(plays[3]) && plays[3].equals(plays[6]) && plays[0].equals("o ")){
-           return 0;
-       }
-       
-       if(plays[1].equals(plays[4]) && plays[4].equals(plays[7])  && plays[1].equals("o ")){
-           return 0;
-       }
-       
-       if(plays[2].equals(plays[5]) && plays[5].equals(plays[8])  && plays[2].equals("o ")){
-           return 0;
-       }
-       
-       if(plays[0].equals(plays[4]) && plays[4].equals(plays[8])  && plays[0].equals("o ")){
-           return 0;
-       }
-       
-       if(plays[2].equals(plays[4]) && plays[4].equals(plays[6])  && plays[2].equals("o ")){
+       if(plays[2].equals(plays[4]) && plays[4].equals(plays[6]) && (plays[2].equals("x ") || plays[2].equals("o "))){
            return 0;
        }
        
